@@ -80,7 +80,6 @@ CatSchema.statics.findByName = (name, callback) => {
 // Look at the model variable definition above for more details.
 CatModel = mongoose.model('Cat', CatSchema);
 
-
 // export our public properties
 module.exports.CatModel = CatModel;
 module.exports.CatSchema = CatSchema;

@@ -8,11 +8,30 @@
   <title>{{title}}</title>
 </head>
 <body>
-  <h1>Welcome to page 3</h1>
+  <h1>{{pageName}}</h1>
   
   <!-- links or URLs are always GET resources as they are getting (retrieving) a resource -->
   <a href="/">Home</a>
   <a href="/page1">Page 1</a>
   <a href="/page2">Page 2</a>
+  <form action="/addDog" method="POST">
+    <label for="name">Name: </label>
+      <input id="nameField" type="text" name="name" />
+      <label for="breed">Breed: </label>
+      <input id="breedField" type="text" name="breed"/>
+      <label for="age">Age: </label>
+      <input id="ageField" type="number" name="age" min="0" max="100" step="1"/>
+      <input type="submit" value="Add User" />
+  </form>
+  <br>
+  <br>
+  <form action="/updateDogAge" method="POST">
+    <label for="nameLookup">Name to lookup:</label>
+    <input id="nameLookupField" type="text" name="nameLookup">
+     <label for="ageLookup">Age to be increased by:</label>
+    <input id="ageIncreaseField" type="number" name="ageLookup" min="0" max="100" step="1"/>
+    <input type="submit" value="Update Age">
+  </form>
+
 </body>
 </html>
