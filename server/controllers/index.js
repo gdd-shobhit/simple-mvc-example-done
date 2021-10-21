@@ -265,7 +265,7 @@ const updateDogAge = (req, res) => {
     }
 
     dog = doc;
-    dog.age += Number.parseInt(req.body.ageLookup, radix);
+    dog.age += Number(req.body.ageLookup);
 
     const savePromise = dog.save();
 
